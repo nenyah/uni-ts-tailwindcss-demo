@@ -1,50 +1,47 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-01-31 15:10:13
+ * @LastEditTime: 2021-01-31 16:11:54
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \jenny-app\src\pages\index\index.vue
+-->
 <template>
-	<view class="content">
-        <image class="logo" src="../../static/logo.png"></image>
-		<view>
-            <text class="title">{{title}}</text>
-        </view>
-	</view>
+  <view class="content">
+    <image class="logo" src="../../static/logo.png"></image>
+    <view>
+      <view class="fa fa-check-circle"></view>
+      <text class="title">{{ title }}</text>
+    </view>
+  </view>
 </template>
 
 <script lang="ts">
-    import Vue from 'vue';
-	export default Vue.extend({
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
-		}
-	});
+import Vue from "vue"
+export default Vue.extend({
+  data() {
+    return {
+      title: "Hello",
+    }
+  },
+  onLoad() {},
+  methods: {},
+})
 </script>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
+.content {
+  @apply flex flex-col items-center justify-center;
+}
 
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin: 200rpx auto 50rpx auto;
-	}
+.logo {
+  @apply h-40 w-40 mt-20 mb-20;
+}
 
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+.text-area {
+  @apply flex justify-center;
+}
+.title {
+  @apply text-2xl text-gray-500;
+}
 </style>
